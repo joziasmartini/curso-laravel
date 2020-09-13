@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/products', 'ProductController@index')->name('products.index');
+
 Route::get('/login', function () {
     return 'Login';
 })->name('login');
@@ -23,6 +25,7 @@ Route::middleware([])->group(function () {
 });
 */
 
+/*
 Route::group([
     'middleware' => [],
     'prefix' => 'admin',
@@ -36,7 +39,7 @@ Route::group([
         return redirect()->route('admin.dashboard');
     })->name('home');
 });
-
+*/
 
 Route::get('/redirect3', function () {
     return redirect()->route('url.name');
